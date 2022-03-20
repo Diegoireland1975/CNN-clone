@@ -381,6 +381,9 @@ img {
   margin: 0 auto;
 }
 
+.page-footer .copyright li {
+  line-height: 1.5rem;
+}
 .page-footer .copyright a {
   margin-right: 1rem;
   font-size: 0.8rem;
