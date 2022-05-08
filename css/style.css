@@ -68,6 +68,9 @@ img {
   align-items: center;
 }
 
+.main-nav {
+  display: none;
+}
 .main-nav li {
   margin-left: 0.5rem;
   border-right: 1px solid #595959;
@@ -218,11 +221,11 @@ img {
 
 .header-expanded-menu-block {
   width: 100vw;
-  height: auto;
+  height: 100%;
   position: absolute;
   top: 50px;
   right: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.99);
   display: none;
 }
 
@@ -231,7 +234,9 @@ img {
 }
 .header-expanded-menu-block.show {
   display: block;
+  z-index: 1;
 }
+
 .header-expanded-menu-block a,
 .page-footer a {
   color: #fff;
@@ -367,7 +372,7 @@ article h3:hover {
   margin-bottom: 1rem;
   padding-bottom: 0.4rem;
   border-bottom: 1px solid #ccc;
-  color: red;
+  color: var(--main-color);
   font-size: 15px;
   font-weight: 300;
   color: rgb(38, 38, 38);
@@ -390,7 +395,7 @@ article h3:hover {
 .flex-article {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #d9d9d9;
 }
 
 .flex-article img {
@@ -404,11 +409,10 @@ article h3:hover {
   line-height: 1.2;
   font-weight: 300;
   background: none;
-  flex-grow: 3;
   margin-left: 0.5rem;
 }
 .headline-text-lg {
-  font-size: 1.33333rem;
+  font-size: 1.33rem;
 }
 .headline-text-sm {
   font-size: 1rem;
@@ -527,6 +531,16 @@ article h3:hover {
 }
 
 @media (min-width: 768px) {
+  .main-nav {
+    display: initial;
+  }
+  .main-nav ul {
+    flex-wrap: wrap;
+  }
+
+  .main-nav li {
+    line-height: 1.3;
+  }
   .header-expanded-menu-block .grid,
   .page-footer .grid {
     grid-template-columns: repeat(5, 1fr);

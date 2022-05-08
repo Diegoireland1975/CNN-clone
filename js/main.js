@@ -22,4 +22,5 @@ searchBar.addEventListener("click", () => {
 // Header expanded menu block
 extendedSwitcher.addEventListener("click", () => {
   headerBlock.classList.toggle("show");
+  document.getElementsByTagName("main").style.display = "none";
 });
